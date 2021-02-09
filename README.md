@@ -1,5 +1,25 @@
 # 3-2 - The Fruit store
 
+---
+
+## 🦊 Pre-lecture
+
+⏲️ _Estimated time required: 20 minutes._
+
+- Take a look at the Styled Components site. (You might want to bookmark this for the remainder of the bootcamp. https://styled-components.com/ _We are hopefully convince you that this is the best way to style React components._
+
+---
+
+## 🦉 Lecture
+
+- [lecture-1-housekeeping.md](__lecture/lecture-1-housekeeping.md)
+- [lecture-2-devtools.md](__lecture/lecture-2-devtools.md)
+- [lecture-3-styled-components.md](__lecture/lecture-3-styled-components.md)
+- [lecture-4-react-router.md](__lecture/lecture-4-react-router.md)
+- [lecture-5-react-fragments.md](__lecture/lecture-5-react-fragments.md)
+
+---
+
 In this workshop, we'll build an online fruit store, with different items being sold by different sellers.
 
 ## Setup
@@ -34,7 +54,7 @@ We want to end up with the following routes:
 
 ---
 
-## Exercises
+## ⚡ Exercises
 
 ### Exercise 1: Routes + links
 

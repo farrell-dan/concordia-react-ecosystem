@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # React DevTools
 
 The React developer tools let you peek into the app the way React sees it.

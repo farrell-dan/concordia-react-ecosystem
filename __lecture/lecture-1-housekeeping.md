@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # [3-2]
 
 # React Ecosystem

@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # React Router
 
 Modern JS apps use "client-side routing".
