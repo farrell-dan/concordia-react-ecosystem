@@ -7,6 +7,7 @@
 ⏲️ _Estimated time required: 20 minutes._
 
 - Take a look at the Styled Components site. (You might want to bookmark this for the remainder of the bootcamp. https://styled-components.com/ _We are hopefully convince you that this is the best way to style React components._
+- Read: https://reactjs.org/docs/lists-and-keys.html
 
 ---
 
