@@ -86,7 +86,7 @@ Convert the following inline styles to styled-components
 ```
 
 ```jsx
-function App(props) {
+const App = (props) => {
   return <div className="wrapper">Hello World</div>;
 }
 ```
@@ -114,7 +114,7 @@ function App(props) {
 ```
 
 ```jsx
-function IconButton(props) {
+const IconButton = (props) => {
   return (
     <button className="btn">
       <i className="icon">{props.icon}</i>
@@ -145,7 +145,7 @@ function IconButton(props) {
 ```
 
 ```jsx
-function FantasticStory(props) {
+const FantasticStory = (props) => {
   return (
     <div>
       <p className="paragraph">

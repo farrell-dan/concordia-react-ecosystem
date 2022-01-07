@@ -6,10 +6,6 @@ marp: true
 
 ---
 
-# Fragments
-
----
-
 In React, components can't return multiple elements:
 
 ```jsx
