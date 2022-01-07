@@ -32,12 +32,6 @@ A `<Route>` component consists of at least two things:
 
 ---
 
-# Why?
-
-Why might we do routing this way, instead of doing it with Express on the back-end?
-
----
-
 # Exercise
 
 What gets rendered in the following snippets?
@@ -75,7 +69,7 @@ Renders the first match
 
 ---
 
-# Router
+# `<Router>`
 
 All routes must be nested under a router
 
@@ -84,22 +78,20 @@ All routes must be nested under a router
 ```jsx
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App(props) {
+const App = (props) => {
   return (
     <Router>
-      <div>
         <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-          <Route exact path="/shop/:itemId">
-            <ItemDetails />
-          </Route>
-          <Route>
-            <ErrorPage />
-          </Route>
+            <Route exact path="/">
+                <Homepage />
+            </Route>
+            <Route exact path="/shop/:itemId">
+                <ItemDetails />
+            </Route>
+            <Route>
+                <ErrorPage />
+            </Route>
         </Switch>
-      </div>
     </Router>
   );
 }

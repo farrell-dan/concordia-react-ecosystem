@@ -47,7 +47,7 @@ const Bacon = ({ items }) => (
 In the last lecture, we saw **default exports**
 
 ```js
-function Button(props) {
+const Button = (props) => {
   ✂️
 }
 
