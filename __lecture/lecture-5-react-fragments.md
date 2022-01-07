@@ -9,8 +9,6 @@ marp: true
 In React, components can't return multiple elements:
 
 ```jsx
-import React from 'react';
-
 const App = ({ user, data }) => {
   // Error:
   return (
@@ -25,8 +23,6 @@ const App = ({ user, data }) => {
 Historically, we'd wrap adjacent children in a `<div>`:
 
 ```jsx
-import React from "react";
-
 const App = ({ user, data }) => {
   return (
     <div>
@@ -42,8 +38,6 @@ const App = ({ user, data }) => {
 We can also use a `Fragment`:
 
 ```jsx
-import React from "react";
-
 const App = ({ user, data }) => {
   return (
     <React.Fragment>
@@ -59,8 +53,6 @@ const App = ({ user, data }) => {
 Shorthand:
 
 ```jsx
-import React from "react";
-
 const App = ({ user, data }) => {
   return (
     <>
