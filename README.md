@@ -1,4 +1,4 @@
-# 3-2 - The Fruit store
+# The Fruit store
 
 ---
 
