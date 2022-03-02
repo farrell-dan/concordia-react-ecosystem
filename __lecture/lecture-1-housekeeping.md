@@ -34,7 +34,13 @@ const items = [
 ]
 
 const Bacon = ({ items }) => (
-    {items.map(item => <li>{item.text}</li>)}
+    return (
+        <>
+            {items.map((item) => {
+                return <li>{item.text}</li>)
+            }}
+        </>
+    )
 );
 ```
 

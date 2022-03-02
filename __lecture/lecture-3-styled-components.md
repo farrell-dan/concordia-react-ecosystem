@@ -22,8 +22,6 @@ const Button = styled.button`
   font-size: 21px;
   border-radius: 2px;
 `;
-
-ReactDOM.render(<Button>Hello World</Button>, document.querySelector("#root"));
 ```
 
 ---
