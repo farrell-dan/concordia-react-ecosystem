@@ -14,10 +14,9 @@
 ## 🦉 Lecture
 
 - [lecture-1-housekeeping.md](__lecture/lecture-1-housekeeping.md)
-- [lecture-2-devtools.md](__lecture/lecture-2-devtools.md)
-- [lecture-3-styled-components.md](__lecture/lecture-3-styled-components.md)
-- [lecture-4-react-router.md](__lecture/lecture-4-react-router.md)
-- [lecture-5-react-fragments.md](__lecture/lecture-5-react-fragments.md)
+- [lecture-2-styled-components.md](__lecture/lecture-2-styled-components.md)
+- [lecture-3-react-router.md](__lecture/lecture-3-react-router.md)
+- [lecture-4-react-fragments.md](__lecture/lecture-4-react-fragments.md)
 
 ---
 
@@ -122,16 +121,6 @@ Create a new `ListingGrid` component. This component will take an array of store
 ```js
 const ListingGrid = ({ itemList }) => {
   return "Todo";
-};
-
-ListingGrid.propTypes = {
-  itemList: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      latinName: PropTypes.string.isRequired,
-      imageSrc: PropTypes.string.isRequired,
-    })
-  ).isRequired,
 };
 ```
 
