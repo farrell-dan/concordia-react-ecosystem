@@ -40,10 +40,12 @@ What gets rendered in the following snippets?
 
 ```jsx
 <div>
-  <Route exact={true} path="/">
-    Home
-  </Route>
-  <Route path="/about">About</Route>
+    <Route exact path="/">
+        Home
+    </Route>
+    <Route path="/about">
+        About
+    </Route>
 </div>
 ```
 
@@ -53,9 +55,15 @@ Current URL: http://localhost:3000/about
 
 ```jsx
 <div>
-  <Route path="/items/:itemId">Item detail page</Route>
-  <Route path="/items">Item list page</Route>
-  <Route>404 not found</Route>
+    <Route path="/items/:itemId">
+        Item detail page
+    </Route>
+    <Route path="/items">
+        Item list page
+    </Route>
+    <Route>
+        404 not found
+    </Route>
 </div>
 ```
 

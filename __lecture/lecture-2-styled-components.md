@@ -172,6 +172,8 @@ const GlobalStyles = createGlobalStyle`
   }
 `
 
+export default GlobalStyles;
+
 // Used as a component
 <GlobalStyles />
 ```
