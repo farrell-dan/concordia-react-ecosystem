@@ -15,20 +15,73 @@ All routes are defined in the React application.
 ```jsx
 import {Route} from 'react-router-dom';
 
-<Route path="/about">
-  <About />
+<Route path="/" element={<Home />} />
+<Route path="/items" element={<Items />} />
+<Route path="/items/200" element={<ItemDetails />} />
+
+```
+
+A `<Route>` component consists of at least two things:
+
+1. The `path` to match (`"/items"`).
+
+2. The `element` to render when the `path` matches (`<Items />`).
+
+---
+
+A `<Route />` can also be nested, to create an organized structure.
+
+```jsx
+<Route path="/" element={<Home />} >
+    <Route path="items" element={<Items />} />
+    <Route path="items/200" element={<ItemDetails />} />
 </Route>
-<Route path="/blog">
-  <Blog />
+```
+
+❗ Notice how the `/` has been removed from the path of the nested `<Route />`!
+
+‼ When a `<Route />` is nested inside of a parent, the paths combine. 
+
+The path of the first nested `<Route />` is now `"/"` + `"items"` (`"/items"`)
+
+---
+
+Nesting doesn't have to stop at one level either!
+
+```jsx
+<Route path="/" element={<Home />} >
+    <Route path="items" element={<Items />} >
+        <Route path="200" element={<ItemDetails />} />
+    </Route>
 </Route>
+```
+
+The path of the Second nested `<Route />` is now `"/"` + `"items"` + `"200"` (`"/items/200"`)
+
+---
+
+# `<Outlet />`
+
+To render a child `<Route />`, you need to put an `<Outlet />` inside the parent component rendered by the parent `<Route />`
+
+```jsx
+import {Outlet} from "react-router-dom"
+
+const Home = () => {
+    return (
+        <div>
+            <h1>This is the home page!</h1>
+            <Outlet /> /* this will render the <Items /> component! */
+        </div>
+    )
+}
 ```
 
 ---
 
-A `<Route>` component consists of at least two things:
+Why would we want to nest routes inside one another?
 
-- The path to match (eg. "/about")
-- What to render when the path matches (the `children` prop)
+Simple! So we don't have to manually re-render parts of our UI. When nesting routes, the parent component persists on the page automatically, saving us a lot of time and trouble!
 
 ---
 
@@ -39,14 +92,8 @@ What gets rendered in the following snippets?
 ---
 
 ```jsx
-<div>
-    <Route exact path="/">
-        Home
-    </Route>
-    <Route path="/about">
-        About
-    </Route>
-</div>
+<Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
 ```
 
 Current URL: http://localhost:3000/about
@@ -54,52 +101,69 @@ Current URL: http://localhost:3000/about
 ---
 
 ```jsx
-<div>
-    <Route path="/items/:itemId">
-        Item detail page
+<Route path="/" element={<Home />} >
+    <Route path="items" element={<Items />} >
+        <Route path=":itemId" element={<ItemDetails />} />
     </Route>
-    <Route path="/items">
-        Item list page
-    </Route>
-    <Route>
-        404 not found
-    </Route>
-</div>
+</Route>
+<Route path="*" element={<Error />} />
 ```
 
 Current URL: http://localhost:3000/items/abc
 
 ---
 
-# `<Switch>`
+# `<Routes>`
 
-Renders the first match
+Renders the first `<Route />` match.
+
+Basaically, think of the `<Routes>` as a `switch` statement for the URL of the website.
+
+This would make the `<Route />` components the `case`.
+
+```jsx
+<Routes>
+    <Route path="/" element={<Home />} >
+        <Route path="items" element={<Items />} >
+            <Route path=":itemId" element={<ItemDetails />} />
+        </Route>
+    </Route>
+    <Route path="*" element={<Error />} />
+</Routes>
+```
 
 ---
 
 # `<Router>`
 
-All routes must be nested under a router
+All routes must be nested under a router.
+
+It doesnt stop there!
+
+All `react-router-dom` components **must** be nested inside a `<Router>`.
+
+Also, `<Router>`'s full name is actually `<BrowserRouter>`. Typically we'll rename it to `<Router>` when it's imported.
+
+❗ There cannot be more than one `<Router>` per application.
 
 ---
 
+## The full picture
+
 ```jsx
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = (props) => {
   return (
     <Router>
-        <Switch>
-            <Route exact path="/">
-                <Homepage />
+        <Routes>
+            <Route path="/" element={<Home />} >
+                <Route path="items" element={<Items />} >
+                    <Route path=":itemId" element={<ItemDetails />} />
+                </Route>
             </Route>
-            <Route exact path="/shop/:itemId">
-                <ItemDetails />
-            </Route>
-            <Route>
-                <ErrorPage />
-            </Route>
-        </Switch>
+            <Route path="*" element={<Error />} />
+        </Routes>
     </Router>
   );
 }
@@ -119,6 +183,8 @@ import { Link } from "react-router-dom";
 <Link to="/shop/abc123">View item details</Link>;
 ```
 
+`<Link>` is the React version of `<a>`.
+
 ---
 
 # Question
@@ -136,12 +202,10 @@ Is this "real" navigation?
 ### Accessing URL params
 
 ```jsx
-<Route path="/items/:itemId">
-  <ItemDetails />
-</Route>
+<Route path="/items/:itemId" element={<ItemDetails />} />
 ```
 
-`ItemDetails` has no props!
+`<ItemDetails />` has no props!
 
 How will it access the `itemId` URL parameter?
 
