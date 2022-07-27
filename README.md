@@ -15,7 +15,7 @@
 
 - [lecture-1-housekeeping.md](__lecture/lecture-1-housekeeping.md)
 - [lecture-2-styled-components.md](__lecture/lecture-2-styled-components.md)
-- [lecture-3-react-router.md](__lecture/lecture-3-react-router.md)
+- [lecture-3-react-router-dom.md](__lecture/lecture-3-react-router-dom.md)
 - [lecture-4-react-fragments.md](__lecture/lecture-4-react-fragments.md)
 
 ---
