@@ -71,7 +71,7 @@ const Home = () => {
     return (
         <div>
             <h1>This is the home page!</h1>
-            <Outlet /> /* this will render the <Items /> component! */
+            <Outlet /> {/* this will render the <Items /> component! */}
         </div>
     )
 }
@@ -82,6 +82,10 @@ const Home = () => {
 Why would we want to nest routes inside one another?
 
 Simple! So we don't have to manually re-render parts of our UI. When nesting routes, the parent component persists on the page automatically, saving us a lot of time and trouble!
+
+❗ Nesting routes is not always necessary, but it is a cool feature!
+
+‼ The parent component is **ALWAYS** rendered when nesting routes.
 
 ---
 
@@ -101,11 +105,9 @@ Current URL: http://localhost:3000/about
 ---
 
 ```jsx
-<Route path="/" element={<Home />} >
-    <Route path="items" element={<Items />} >
-        <Route path=":itemId" element={<ItemDetails />} />
-    </Route>
-</Route>
+<Route path="/" element={<Home />} />
+<Route path="/items" element={<Items />} />
+<Route path="/:itemId" element={<ItemDetails />} />
 <Route path="*" element={<Error />} />
 ```
 
@@ -123,11 +125,9 @@ This would make the `<Route />` components the `case`.
 
 ```jsx
 <Routes>
-    <Route path="/" element={<Home />} >
-        <Route path="items" element={<Items />} >
-            <Route path=":itemId" element={<ItemDetails />} />
-        </Route>
-    </Route>
+    <Route path="/" element={<Home />} />
+    <Route path="/items" element={<Items />} />
+    <Route path="/:itemId" element={<ItemDetails />} />
     <Route path="*" element={<Error />} />
 </Routes>
 ```
@@ -157,11 +157,9 @@ const App = (props) => {
   return (
     <Router>
         <Routes>
-            <Route path="/" element={<Home />} >
-                <Route path="items" element={<Items />} >
-                    <Route path=":itemId" element={<ItemDetails />} />
-                </Route>
-            </Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/items" element={<Items />} />
+            <Route path="/:itemId" element={<ItemDetails />} />
             <Route path="*" element={<Error />} />
         </Routes>
     </Router>
