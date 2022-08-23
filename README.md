@@ -68,9 +68,8 @@ For example:
 
 ```jsx
 <Routes>
-    <Route path="/" element={<h1>Home</h1>}>
-        <Route path="/about" element={<h1>About</h1>} />
-    </Route>
+    <Route path="/" element={<h1>Home</h1>} />
+    <Route path="/about" element={<h1>About</h1>} />
 </Routes>
 ```
 
@@ -96,9 +95,8 @@ Create two new components, `<Home />` and `<About />` and render them for their 
 
 ```jsx
 <Routes>
-    <Route path="/" element={<Home />}>
-        <Route path="about" element={<About />} />
-    </Route>
+    <Route path="/" element={<Home />} />
+    <Route path="about" element={<About />} />
 </Routes>
 ```
 
@@ -110,7 +108,7 @@ Fruit emporium is founded on a very simple principle: Fruit is good.
 We carry the finest selection of produce from around the world, from tart citrus to sweet cherries. Our sellers are world-class, and your fruit is guaranteed to be worthy of auction in Asian markets.
 ```
 
-In the `<Home />` component, lets start by removing the `<Header />` from above the `<Routes>` and bringing it into `<Home />`. Below `<Header />`, we can add the following text:
+In the `<Home />` component, lets add:
 
 ```md
 Fruit emporium sells the finest fruits from this world and beyond.
