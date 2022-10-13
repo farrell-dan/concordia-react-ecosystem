@@ -108,6 +108,7 @@ const App = (props) => {
 .icon {
   width: 32px;
   height: 32px;
+  font-style: italic;
 }
 ```
 
@@ -115,7 +116,7 @@ const App = (props) => {
 const IconButton = (props) => {
   return (
     <button className="btn">
-      <i className="icon">{props.icon}</i>
+      <span className="icon">{props.icon}</span>
       {props.children}
     </button>
   );
@@ -133,7 +134,8 @@ const IconButton = (props) => {
   color: #333;
 }
 
-.paragraph strong {
+.paragraph .bold {
+    font-weight: bold;
   color: red;
 }
 
@@ -147,7 +149,7 @@ const FantasticStory = (props) => {
   return (
     <div>
       <p className="paragraph">
-        The <strong>quick</strong> red fox jumped over the <em>lazy</em> dog.
+        The <span className="bold">quick</span> red fox jumped over the <em>lazy</em> dog.
       </p>
       <p>The end.</p>
     </div>
