@@ -204,7 +204,7 @@ Here are the requirements:
 
 React router comes with a special variant of Link called NavLink. The difference is that it can tell whether it's linking to the current page.
 
-Here's the documentation for this component: https://reactrouter.com/docs/en/v6/components/nav-link
+The link to the documentation keeps changing, so you'll have to google it.
 
 Use this component to add a little underline + color change for the active link.
 

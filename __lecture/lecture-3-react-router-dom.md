@@ -171,5 +171,3 @@ const ItemDetails = () => {
   return <h3>Item ID: {itemId}</h3>;
 };
 ```
-
-[Documentation](https://reacttraining.com/react-router/web/example/url-params)
