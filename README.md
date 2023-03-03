@@ -13,10 +13,10 @@
 
 ## 🦉 Lecture
 
-- [lecture-1-housekeeping.md](__lecture/lecture-1-housekeeping.md)
-- [lecture-2-styled-components.md](__lecture/lecture-2-styled-components.md)
-- [lecture-3-react-router-dom.md](__lecture/lecture-3-react-router-dom.md)
-- [lecture-4-react-fragments.md](__lecture/lecture-4-react-fragments.md)
+- [lecture-1-housekeeping.md](./lecture/lecture-1-housekeeping.md)
+- [lecture-2-styled-components.md](./lecture/lecture-2-styled-components.md)
+- [lecture-3-react-router-dom.md](./lecture/lecture-3-react-router-dom.md)
+- [lecture-4-react-fragments.md](./lecture/lecture-4-react-fragments.md)
 
 ---
 
@@ -46,15 +46,15 @@ We want to end up with the following routes:
 
 ### Homepage:
 
-![homepage screenshot](./__lecture/assets/home.png)
+![homepage screenshot](./lecture/assets/home.png)
 
 ### About page:
 
-![About screenshot](./__lecture/assets/about.png)
+![About screenshot](./lecture/assets/about.png)
 
 ### Items page
 
-!["Banana" item page screenshot](./__lecture/assets/items.png)
+!["Banana" item page screenshot](./lecture/assets/items.png)
 
 ---
 
@@ -77,7 +77,7 @@ Create a new `<Header />` component, and render it _above_ the `<Routes>`.
 
 The `<Header />` component should add the logo on the left, and navigation links on the right:
 
-![Header](./__lecture/assets/header.png)
+![Header](./lecture/assets/header.png)
 
 The links should use a `<Link>` component to link towards the relevant pages.
 
@@ -85,7 +85,7 @@ You should use styled-components for all styling.
 
 You should be able to click the links to update the text on the screen:
 
-![Routing](./__lecture/assets/routing.gif)
+![Routing](./lecture/assets/routing.gif)
 
 ---
 
@@ -149,8 +149,8 @@ We can import this data into our `Home` component, turn it into an array (hint: 
 
 Inside `<ListingGrid />`, we'll want to map over this array, and produce some UI for each element of the array. In the screenshot, quite a bit of styling is applied, but you can feel free to style this however you want. The only requirements are that you render the image, the item name, and the item latin name:
 
-![minimal styling](./__lecture/assets/unstyled-items.png)
-![lots of styling](./__lecture/assets/styled-items.png)
+![minimal styling](./lecture/assets/unstyled-items.png)
+![lots of styling](./lecture/assets/styled-items.png)
 
 > Hint: To arrange things in a grid, you can either give each one a specific width and use `display: inline-block` to stack them side-by-side. You can also use CSS grid, by using `auto-fit` and `minmax`.
 
@@ -158,7 +158,7 @@ Inside `<ListingGrid />`, we'll want to map over this array, and produce some UI
 
 The items in our `<ListingGrid />` component should link to a new "item details" page:
 
-!["Banana" item page screenshot](./__lecture/assets/items.png)
+!["Banana" item page screenshot](./lecture/assets/items.png)
 
 Here are the steps we'll need to take:
 
@@ -185,7 +185,7 @@ In our new `<ItemDetails />` component, import `items` from `src/data.js`, and u
 
 Render the item details. Use `styled-components` for all styling. It's up to you to choose whether you stick to the mockup exactly, or whether you add your own details. For reference, here's an example mockup:
 
-!["Banana" item page screenshot](./__lecture/assets/items.png)
+!["Banana" item page screenshot](./lecture/assets/items.png)
 
 Here are the requirements:
 
@@ -208,7 +208,7 @@ The link to the documentation keeps changing, so you'll have to google it.
 
 Use this component to add a little underline + color change for the active link.
 
-![Navlink](./__lecture/assets/navlink.gif)
+![Navlink](./lecture/assets/navlink.gif)
 
 ---
 
