@@ -1,7 +1,5 @@
 # The Fruit store
 
----
-
 ## 🦊 Pre-lecture
 
 ⏲️ _Estimated time required: 20 minutes._
