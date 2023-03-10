@@ -4,17 +4,17 @@
 
 ⏲️ _Estimated time required: 20 minutes._
 
-- Take a look at the Styled Components site. (You might want to bookmark this for the remainder of the bootcamp. https://styled-components.com/ _We are hopefully convince you that this is the best way to style React components._
-- Read: https://reactjs.org/docs/lists-and-keys.html
+- Take a look at the Styled Components site. (You might want to bookmark this for the remainder of the bootcamp. [Style-Components](https://styled-components.com/) _We are hopefully convince you that this is the best way to style React components._
+- Read: [React: Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
 
 ---
 
 ## 🦉 Lecture
 
-- [lecture-1-housekeeping.md](./lecture/lecture-1-housekeeping.md)
-- [lecture-2-styled-components.md](./lecture/lecture-2-styled-components.md)
-- [lecture-3-react-router-dom.md](./lecture/lecture-3-react-router-dom.md)
-- [lecture-4-react-fragments.md](./lecture/lecture-4-react-fragments.md)
+- [Lecture 1 | Housekeeping](./lecture/lecture-1-housekeeping.md)
+- [Lecture 2 | Styled-Components](./lecture/lecture-2-styled-components.md)
+- [Lecture 3 | React Router DOM](./lecture/lecture-3-react-router-dom.md)
+- [Lecture 4 | React Fragments](./lecture/lecture-4-react-fragments.md)
 
 ---
 
