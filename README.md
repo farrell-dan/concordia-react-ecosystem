@@ -22,7 +22,7 @@ In this workshop, we'll build an online fruit store, with different items being 
 
 ## Setup
 
-Today's lecture introduced two new packages: [`styled-components`](https://styled-components.com/) and [`react-router`](https://reactrouter.com/). Let's install both of them. Run the following command in the project directory:
+Today's lecture introduced two new packages: [`styled-components`](https://styled-components.com/) and [`react-router`](https://reactrouter.com/). Let's install both of them. Run the following command in the workshop directory:
 
 ```md
 yarn add styled-components react-router-dom
@@ -30,7 +30,7 @@ yarn add styled-components react-router-dom
 
 > You can install multiple packages at the same time by separating them with spaces!
 
-This project has very minimal scaffolding. We have a `data.js` with some items and sellers, and that's pretty much it.
+This workshop has very minimal scaffolding. We have a `data.js` with some items and sellers, and that's pretty much it.
 
 ---
 
