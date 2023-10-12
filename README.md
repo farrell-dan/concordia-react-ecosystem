@@ -2,7 +2,7 @@
 
 ## 🦊 Pre-lecture
 
-⏲️ _Estimated time required: 20 minutes._
+⏲️ _Estimated time required: 20 to 40 minutes._
 
 - Take a look at the Styled Components site. (You might want to bookmark this for the remainder of the bootcamp. [Style-Components](https://styled-components.com/) _We are hopefully convince you that this is the best way to style React components._
 - Read: [React: Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
