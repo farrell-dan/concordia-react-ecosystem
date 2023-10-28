@@ -13,7 +13,16 @@ const Header = () => {
         <Link to="/" className={({ isActive }) => (isActive ? "active" : "")}>
           Home
         </Link>
-        <Link to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+        <Link
+          to="/sellers"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          Sellers
+        </Link>
+        <Link
+          to="/about"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
           About
         </Link>
       </Nav>

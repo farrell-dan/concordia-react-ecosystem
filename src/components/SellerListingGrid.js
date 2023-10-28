@@ -4,21 +4,23 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-const ListingGrid = ({ itemList }) => {
 
-console.log({itemList});
+
+const SellerListingGrid = ({ sellerList }) => {
+
+  console.log({ sellerList });
 
   return (
     <GridContainer>
-      {itemList.map((item) => (
-        <GridItem key={item.id}>
+      {sellerList.map((seller) => (
+        <GridItem key={seller.id}>
           <Link
-            to={`/items/${item.id}`}
+            to={`/sellers/${seller.id}`}
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            <img src={item.imageSrc} alt={item.name} width="100" />
-            <h3>{item.name}</h3>
-            <p>{item.latinName}</p>
+            <img src={seller.avatarSrc} alt={seller.storeName} width="100" />
+            <h3>{seller.storeName}</h3>
+            <p>{seller.description}</p>
           </Link>
         </GridItem>
       ))}
@@ -26,11 +28,11 @@ console.log({itemList});
   );
 };
 
-export default ListingGrid;
+export default SellerListingGrid;
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 20px 0;
 `;
