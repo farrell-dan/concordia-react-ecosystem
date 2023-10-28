@@ -1,5 +1,3 @@
-//src/components/About.js
-
 import styled from "styled-components";
 
 const About = () => {

@@ -1,5 +1,3 @@
-//src/components/ItemDetails.js
-
 import { useParams } from "react-router-dom";
 import { sellers } from "../data";
 import styled from "styled-components";

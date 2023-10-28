@@ -1,5 +1,3 @@
-//src/components/Header.js
-
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Home from "./Home";

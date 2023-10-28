@@ -1,5 +1,3 @@
-//src/components/Home.js
-
 import ListingGrid from "./ListingGrid";
 import { items } from "../data";
 import styled from "styled-components";

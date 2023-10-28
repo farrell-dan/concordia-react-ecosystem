@@ -1,6 +1,3 @@
-//src/components/ListingGrid.js
-
-
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
