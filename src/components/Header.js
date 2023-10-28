@@ -10,8 +10,12 @@ const Header = () => {
     <HeaderContainer>
       <Logo> Fruit Emporium</Logo>
       <Nav>
-        <NavLinkItem to="/"> Home </NavLinkItem>
-        <NavLinkItem to="/about"> About </NavLinkItem>
+        <Link to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+          Home
+        </Link>
+        <Link to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+          About
+        </Link>
       </Nav>
     </HeaderContainer>
   );
@@ -21,14 +25,15 @@ export default Header;
 
 const HeaderContainer = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 20px;
 `;
 
 const Logo = styled.h1`
-  font-size: 24px;
+  font-size: 42px;
   margin: 0;
+  color: darkblue;
 `;
 
 const Nav = styled.nav`
@@ -36,8 +41,14 @@ const Nav = styled.nav`
   padding: 5px;
 `;
 
-const NavLinkItem = styled(NavLink)`
+const Link = styled(NavLink)`
   text-decoration: none;
   margin: 10px 10px;
   font-size: 16px;
+  color: black;
+
+  &.active {
+    text-decoration: underline;
+    color: blue;
+  }
 `;

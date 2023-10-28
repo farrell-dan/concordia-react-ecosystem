@@ -1,3 +1,5 @@
+//src/components/App.js
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import styled from "styled-components";

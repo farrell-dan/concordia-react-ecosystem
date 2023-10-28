@@ -1,16 +1,25 @@
+//src/components/Home.js
+
 import ListingGrid from "./ListingGrid";
 import { items } from "../data";
+import styled from "styled-components";
 
 const Home = () => {
   const itemList = Object.values(items);
 
   return (
-    <div>
+    <Wrapper>
       <p>Fruit emporium sells the finest fruits from this world and beyond.</p>
-      <p>Browse items:</p>
+      <p style={{fontWeight: "bold"}}>Browse items:</p>
       <ListingGrid itemList={itemList} />
-    </div>
+    </Wrapper>
   );
 };
 
 export default Home;
+
+const Wrapper = styled.div`
+ > p{
+    margin-left: 15%;
+ }
+`
