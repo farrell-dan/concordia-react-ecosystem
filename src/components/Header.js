@@ -2,7 +2,8 @@
 
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+import Home from "./Home";
+import About from "./About";
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       <Logo> Fruit Emporium</Logo>
       <Nav>
         <NavLinkItem to="/"> Home </NavLinkItem>
-        <NavLinkItem to="/about"> About</NavLinkItem>
+        <NavLinkItem to="/about"> About </NavLinkItem>
       </Nav>
     </HeaderContainer>
   );
@@ -18,13 +19,11 @@ const Header = () => {
 
 export default Header;
 
-
 const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-
 `;
 
 const Logo = styled.h1`
@@ -35,7 +34,6 @@ const Logo = styled.h1`
 const Nav = styled.nav`
   display: flex;
   padding: 5px;
-
 `;
 
 const NavLinkItem = styled(NavLink)`
